@@ -61,7 +61,7 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 ## Paso 2: Conexión DB
 Después creamos la conexión de la base de datos a Mongo Atlas.
-Para ello un archivo .env que contiene url con la conexión a Mongo Atlas. Después creamos la carpeta config y dentro de ello el archivo config.js con el código que necesitamos para la coneción a la base de datos.
+Para ello un archivo .env que contiene url con la conexión a Mongo Atlas. Después creamos la carpeta config y dentro de ello el archivo config.js con el código que necesitamos para la conexión a la base de datos.
 
 Luego nos importaremos dicha conexión en index.js y llamamos la función para que cuando levantemos el servidor haga la conexión.
 
@@ -72,7 +72,9 @@ const app = express();
 const PORT = 8080;
 const { dbConnection } = require('./config/config');
 
-dbConnection();
+
+
+dbConnection(); 
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 ```
@@ -196,3 +198,7 @@ Con esto ya tendríamos un servidor de express con una conexión a una base de d
 - [Express](https://expressjs.com/)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+
+
+## Falta por hacer
+Probarlo en postman que no me acuerdo como se hace
